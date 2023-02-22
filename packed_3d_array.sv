@@ -6,12 +6,16 @@ module packed_3d_array;
       data[1]=32'h12345678;
       data[2]=32'hc0defade;
       $display("data=0x%0h",data);
-      foreach(data[i])
+      
         begin
+          int i;
+          int j;
+      foreach(data[i])
+       
           $display("data[%d]=0x%h",i,data[i]);
           foreach (data[i][j])
-            begin
+          
               $display("data[%d][%d]=0x%h",i,j,data[i][j]);  
-            end
+        end
         end
       endmodule
